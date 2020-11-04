@@ -22,11 +22,20 @@ $(document).ready(function() {
             prezzo: 0.7
         },
         {
-            nome: 'gomma',
+            nome: 'penna',
             codice: 'drg',
-            prezzo: 0.7
+            prezzo: 0.5
         }
     ];
+
+    const getRandomChar = () => {
+        var alfabeto = 'abcdefghijklmnopqrstuvwxyz';
+
+        var posizione = getRndInteger(0, 25);
+
+        var lettera_casuale = alfabeto.charAt(posizione);
+        return lettera_casuale;
+    };
 
     let products_copy = products.map((element) => {
 
@@ -60,14 +69,7 @@ $(document).ready(function() {
 
     });*/
 
-    const getRandomChar = () => {
-        var alfabeto = 'abcdefghijklmnopqrstuvwxyz';
 
-        var posizione = getRndInteger(0, 25);
-
-        var lettera_casuale = alfabeto.charAt(posizione);
-        return lettera_casuale;
-    };
 
     // genero un numero a caso
     function getRndInteger(min, max) {
