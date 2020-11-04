@@ -38,14 +38,12 @@ $(document).ready(function() {
         },
     ];
 
-    /*
-let newListaNomi = listaNomi.filter((sceltauno, sceltaDue) => {
-        sceltaUno = parseInt(prompt("Digitare un numero da 0 a 9"));
-        sceltaDue = parseInt(prompt("Digitare un numero da 0 a 9"));
-        return sceltaUno && sceltaDue;
-    });*/
+    let sceltaUno = parseInt(prompt("Digitare un numero da 0 a 9"));
+    let sceltaDue = parseInt(prompt("Digitare un numero da 0 a 9"));
 
-
+    let newListaNomi = listaNomi.filter((element, index) => {
+        return sceltaUno <= index && sceltaDue >= index;
+    });
 
     console.log(newListaNomi);
 
